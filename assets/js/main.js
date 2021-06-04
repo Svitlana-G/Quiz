@@ -91,6 +91,37 @@ data.forEach((frage) => {
     // myButton1.appendChild(myButton1Text)
     // // console.log(myButton1Text)
     // document.getElementById('content').appendChild(myButton1)
-
 }
 )
+let allSection = document.querySelectorAll('section')
+// console.log(allSection)
+
+for (let i = 0; i < allSection.length; i++) {
+
+    allSection[i].addEventListener('click', (event) => {
+
+        let res = event.target.innerText
+
+        // console.log(event.target.tagName)
+        if (event.target.tagName != 'BUTTON') { return }
+
+        if (res == "true") {
+            res = true
+        }
+        else if (res == "false") {
+            res = false
+        }
+
+        if (res == data[i].answer) {
+            event.target.style.backgroundColor = 'green'
+
+        }
+        else {
+            event.target.style.backgroundColor = 'red'
+        }
+    }
+    )
+}
+
+
+
