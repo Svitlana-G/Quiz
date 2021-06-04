@@ -1,0 +1,31 @@
+
+body{
+    margin-bottom: 10vh;
+}
+figure{
+    margin-top: 20vh;
+}
+
+figure,figcaption{
+    text-align: center;
+}
+
+figcaption{
+    font-weight: bold;
+    padding: 1vh;
+}
+
+section{
+    display: flex;
+    justify-content: left;
+    margin-left: 25%;
+}
+
+button {
+    margin-right: 3%;
+    width: 15%;
+    padding: 2vh;
+    color: #fff;
+    background-color: #2E2E2E;
+    border: none;
+}

@@ -76,12 +76,14 @@ data.forEach((frage) => {
 
     document.getElementById('content').appendChild(myFigure)
 
-    frage.choice.forEach((ch) => {
+    let mySection = document.createElement('section')
 
+    frage.choice.forEach((ch) => {
         let myButton = document.createElement('button')
         let myButtonText = document.createTextNode([ch])
         myButton.appendChild(myButtonText)
-        document.getElementById('content').appendChild(myButton)
+        mySection.appendChild(myButton)
+        document.getElementById('content').appendChild(mySection)
     })
 
     // let myButton1 = document.createElement('button')
