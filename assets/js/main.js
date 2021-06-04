@@ -62,7 +62,7 @@ let data = [
 ]
 
 data.forEach((frage) => {
-    console.log(frage.question)
+    // console.log(frage.question)
     let myFigure = document.createElement('figure')
 
     let myImg = document.createElement('img')
@@ -75,5 +75,20 @@ data.forEach((frage) => {
     myFigure.appendChild(myFigCaption)
 
     document.getElementById('content').appendChild(myFigure)
+
+    frage.choice.forEach((ch) => {
+
+        let myButton = document.createElement('button')
+        let myButtonText = document.createTextNode([ch])
+        myButton.appendChild(myButtonText)
+        document.getElementById('content').appendChild(myButton)
+    })
+
+    // let myButton1 = document.createElement('button')
+    // let myButton1Text = document.createTextNode(frage.choice[0])
+    // myButton1.appendChild(myButton1Text)
+    // // console.log(myButton1Text)
+    // document.getElementById('content').appendChild(myButton1)
+
 }
 )
